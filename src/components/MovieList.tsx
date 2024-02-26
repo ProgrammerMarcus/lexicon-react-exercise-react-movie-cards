@@ -15,11 +15,11 @@ export function MovieList({ controls, movieList }: MovieListProps) {
                 <p className="sorting">
                     Sort by:{" "}
                     <span onClick={controls.sortTitle} className="date sort">
-                        date
+                        title
                     </span>
                     {" or "}
                     <span onClick={controls.sortRating} className="author sort">
-                        author
+                        rating
                     </span>
                 </p>
                 {movieList.map((movie: Movie) => (

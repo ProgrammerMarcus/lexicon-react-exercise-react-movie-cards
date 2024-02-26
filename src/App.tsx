@@ -30,7 +30,7 @@ export function App() {
         },
         sortRating: () => {
             setMovieList((oldMovies) => {
-                return [...oldMovies].sort((a, b) => Number(a) - Number(b));
+                return [...oldMovies].sort((a, b) => -(Number(a.rating) - Number(b.rating)));
             });
         },
     };
