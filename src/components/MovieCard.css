@@ -1,0 +1,23 @@
+.movie {
+    background-color: var(--focus-color);
+    display: grid;
+    grid-template: 1fr / 1fr;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    .top {
+        display: grid;
+        grid-template: 1fr / 1fr 1fr;
+        justify-content: space-between;
+        font-size: 1.4rem;
+        .rating {
+            margin: auto 0 auto auto;
+        }
+    }
+    .genre {
+        margin: auto 0 auto auto;
+        font-size: 1.2rem;
+    }
+
+}

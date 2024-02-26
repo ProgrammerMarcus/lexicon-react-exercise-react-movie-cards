@@ -1,4 +1,4 @@
-import "./Form.css";
+import "./AddMovie.css";
 import { FormEvent } from "react";
 import { useState } from "react";
 import Movie from "../interfaces/InterfaceMovie";
@@ -9,8 +9,8 @@ interface AddMovieProps {
 
 export function AddMovie({ submit }: AddMovieProps) {
     const [title, setTitle] = useState("");
-    const [rating, setRating] = useState("");
-    const [genre, setGenre] = useState("");
+    const [rating, setRating] = useState(5);
+    const [genre, setGenre] = useState("Drama");
     const [description, setDescription] = useState("");
 
     const submitHandler = (e: FormEvent<HTMLFormElement>) => {
@@ -47,12 +47,13 @@ export function AddMovie({ submit }: AddMovieProps) {
                 <input
                     required
                     onChange={(event) => {
-                        setRating(event.target.value);
+                        setRating(Number(event.target.value));
                     }}
                     type="range"
                     name="form-rating"
                     id="form-rating"
                     className="rating"
+                    defaultValue={5}
                     min={1}
                     max={5}
                 />
@@ -63,6 +64,7 @@ export function AddMovie({ submit }: AddMovieProps) {
                     className="genre input"
                     name="form-genre"
                     id="form-genre"
+                    required
                     onChange={(event) => {
                         setGenre(event.target.value);
                     }}
@@ -90,6 +92,7 @@ export function AddMovie({ submit }: AddMovieProps) {
                     Description
                 </label>
                 <textarea
+                    required
                     onChange={(event) => {
                         setDescription(event.target.value);
                     }}
