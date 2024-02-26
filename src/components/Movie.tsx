@@ -1,7 +1,7 @@
 import { BaseSyntheticEvent } from "react";
 import InterfaceControls from "../interfaces/InterfaceControls";
 import "./Todo.css";
-import Note from "../interfaces/Note";
+import Note from "../interfaces/InterfaceMovie";
 
 interface ToDoProps {
     controls: InterfaceControls;

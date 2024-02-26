@@ -1,7 +1,7 @@
 import Container from "./components/Container";
 import "./App.css";
-import Form from "./components/Form";
-import Note from "./interfaces/Note";
+import Form from "./components/AddMovie";
+import Note from "./interfaces/InterfaceMovie";
 import { useState } from "react";
 import Controls from "./interfaces/InterfaceControls";
 

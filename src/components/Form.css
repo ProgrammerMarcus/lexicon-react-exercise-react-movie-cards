@@ -1,6 +1,6 @@
 .form {
     display: grid;
-    grid-template: 1fr / 1fr;
+    grid-template: 1fr / max-content 1fr;
     backdrop-filter: var(--backdrop);
     border: var(--border);
     max-width: 720px;
@@ -8,6 +8,7 @@
     padding: 0.3rem;
     border-radius: 0.3rem;
     color: white;
+    gap: 0.7rem 2rem;
     .input {
         background-color: var(--focus-color);
         padding: 0.3rem;
@@ -19,18 +20,65 @@
     .label {
         text-shadow: 1px 1px var(--focus-color);
     }
-    .submit {
+    .btn {
         background-color: var(--btn);
-        margin: 5px 0 0 auto;
+        width: 4rem;
+        text-align: center;
         padding: 0.5rem;
         border-radius: 15%;
         cursor: pointer;
     }
-    .submit:hover {
+    .btn:hover {
         background-color: var(--focus-color);
         transition: 0.3s;
     }
-    input[type="date"]::-webkit-calendar-picker-indicator {
-        filter: invert(100%);
+    .clear {
+        position: relative;
+        left: 6rem;
+        margin: 5px 0 0 auto;
+    }
+    .submit {
+        margin: 5px 0 0 auto;
+    }
+    .text {
+        word-wrap: break-word;
+    }
+    .rating {
+        -webkit-appearance: none; /* Override default CSS styles */
+        appearance: none;
+        width: 90%; /* Full-width */
+        height: 5px;
+        background: white; /* Grey background */
+        margin: auto;
+        box-shadow: 1px 1px var(--focus-color);
+        position: relative;
+    }
+    .rating::after {
+        content: "5";
+        width: 5%;
+        font-size: 1.2rem;
+        text-shadow: 1px 1px var(--focus-color);
+        position: absolute;
+        right: -6%;
+        top: -12px;
+    }
+    .rating::before {
+        content: "1";
+        width: 5%;
+        font-size: 1.2rem;
+        text-shadow: 1px 1px var(--focus-color);
+        position: absolute;
+        left: -3%;
+        top: -12px;
+    }
+    .rating::-webkit-slider-thumb {
+        -webkit-appearance: none; /* Override default look */
+        appearance: none;
+        width: 25px; /* Set a specific slider handle width */
+        height: 25px; /* Slider handle height */
+        background: var(--btn); /* Green background */
+        cursor: pointer; /* Cursor on hover */
+        border-radius: 50%;
+        background-color: #dd2222;
     }
 }

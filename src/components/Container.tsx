@@ -1,6 +1,6 @@
-import ToDo from "./Todo";
+import ToDo from "./Movie";
 import "./Container.css";
-import Note from "../interfaces/Note";
+import Note from "../interfaces/InterfaceMovie";
 import InterfaceControls from "../interfaces/InterfaceControls";
 
 interface ContainerProps {

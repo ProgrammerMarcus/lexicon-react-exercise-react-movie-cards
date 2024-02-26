@@ -1,4 +1,4 @@
-import Note from "./Note";
+import Note from "./InterfaceMovie";
 
 export interface NoteListProps {
     noteList: Note[]
