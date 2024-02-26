@@ -1,0 +1,36 @@
+.form {
+    display: grid;
+    grid-template: 1fr / 1fr;
+    backdrop-filter: var(--backdrop);
+    border: var(--border);
+    max-width: 720px;
+    margin: 40px auto 10px auto;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    color: white;
+    .input {
+        background-color: var(--focus-color);
+        padding: 0.3rem;
+        border-radius: 0.3rem;
+    }
+    .input:focus {
+        outline: 1px solid white;
+    }
+    .label {
+        text-shadow: 1px 1px var(--focus-color);
+    }
+    .submit {
+        background-color: var(--btn);
+        margin: 5px 0 0 auto;
+        padding: 0.5rem;
+        border-radius: 15%;
+        cursor: pointer;
+    }
+    .submit:hover {
+        background-color: var(--focus-color);
+        transition: 0.3s;
+    }
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        filter: invert(100%);
+    }
+}

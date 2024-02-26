@@ -1,0 +1,28 @@
+.container {
+    max-width: 720px;
+    margin: 0 auto;
+    display: grid;
+    gap: 0.5rem;
+    padding: 10px;
+    border-radius: 5px;
+    backdrop-filter: var(--backdrop);
+    border: var(--border);
+    min-height: 60svh;
+    grid-template: min-content / 1fr;
+    place-content: start;
+
+    .sorting {
+        margin-left: 0.5rem;
+        color: white;
+        .sort {
+            text-decoration: underline;
+            padding: 0.3rem 0.2rem;
+        }
+        .sort:hover {
+            cursor: pointer;
+            background-color: var(--btn);
+            border-radius: 0.5rem;
+        }
+    }
+
+}

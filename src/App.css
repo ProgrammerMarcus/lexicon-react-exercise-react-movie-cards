@@ -1,0 +1,22 @@
+:root {
+    --backdrop: blur(10px) brightness(0.8) contrast(0.8);
+    --focus-color: #00000047;
+    --border: 2px solid rgba(255, 255, 255, 0.1);
+    --btn: #ff000088;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.background {
+    width: 100lvw;
+    height: 100lvh;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url("bg.webp");
+    background-size: cover;
+}
